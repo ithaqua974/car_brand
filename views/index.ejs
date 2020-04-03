@@ -22,7 +22,7 @@
     <div class="container">
         <form action="" class="form-inline">
             <div class="form-group mb-2">
-                <select class="form-control form-control-sm" name="carMakes" id="car-makes">
+                <select class="form-control form-control-sm" name="carMakes" id="carMakes">
                     <% for(d of data) { %>
                     <option value="<%= d.make_id %>">
                         <%= d.make_display %>
@@ -53,7 +53,17 @@
     </script>
     <script type="text/javascript" src="http://www.carqueryapi.com/js/jquery.min.js"></script>
     <script type="text/javascript" src="http://www.carqueryapi.com/js/carquery.0.3.4.js"></script>
-    <script type="text/javascript" src="../src/car.js"></script>
+    <script>
+        //fonction onchange
+        $("#carMakes").change(function () {
+
+            $.ajax({
+                url: '/model/' ?
+                    type : 'GET',
+            });
+
+        });
+    </script>
 </body>
 
 </html>
