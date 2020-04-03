@@ -29,7 +29,13 @@
                     </option>
                     <% } %>
                 </select>
-                <select class="form-control form-control-sm" name="car-models" id="car-models"></select>
+                <select class="form-control form-control-sm" name="carModels" id="carModels">
+                    <% for(m of data) { %>
+                    <option value="<%= d.model_name %>">
+                        <%= m.model_name %>
+                    </option>
+                    <% } %>
+                </select>
                 <!-- <select class="form-control form-control-sm" name="car-model-trims" id="car-model-trims"></select> -->
             </div>
             <input class="btn btn-primary mb-2" id="cq-show-data" type="button" value="Show Data" />
@@ -55,8 +61,8 @@
     <script type="text/javascript" src="http://www.carqueryapi.com/js/carquery.0.3.4.js"></script>
     <script>
         //fonction onchange
-        $("#carMakes").change(function () {
-
+        $("#carMakes").on('change', function () {
+            let brand = $(this).find(":checked").val();
             $.ajax({
                 url: '/model/' ?
                     type : 'GET',
