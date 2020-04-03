@@ -1,0 +1,27 @@
+{
+  "name": "bourne",
+  "version": "1.0.0",
+  "description": "json manipulate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ithaqua974/bourne.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ithaqua974/bourne/issues"
+  },
+  "homepage": "https://github.com/ithaqua974/bourne#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "debug": "^4.1.1",
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "request": "^2.88.2"
+  }
+}
