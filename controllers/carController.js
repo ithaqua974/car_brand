@@ -21,7 +21,7 @@ controller.list1 = (req, res) => {
     )
 };
 controller.list2 = (req, res) => {
-    request('https: //www.carqueryapi.com/api/0.3/?cmd=getModels&make=chrysler', {
+    request('https: //www.carqueryapi.com/api/0.3/?cmd=getModels&make=' + req.body.carMakes, {
             async: true
         }, (err, data2) => {
             // console.log(data);
